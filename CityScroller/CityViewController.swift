@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CityViewController.swift
 //  CityScroller
 //
 //  Created by Tomasz Bogusz on 29.03.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
