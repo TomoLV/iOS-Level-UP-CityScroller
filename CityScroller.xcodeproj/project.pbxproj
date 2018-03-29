@@ -14,6 +14,8 @@
 		2B0F7486206D64C3000693A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0F7484206D64C3000693A4 /* LaunchScreen.storyboard */; };
 		2B0F7490206D6546000693A4 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F748E206D6546000693A4 /* Misc.swift */; };
 		2B0F7491206D6546000693A4 /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F748F206D6546000693A4 /* BuildingView.swift */; };
+		2B0F7495206D7626000693A4 /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F7494206D7626000693A4 /* MoonView.swift */; };
+		2B0F7497206D80D9000693A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F7496206D80D9000693A4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2B0F7487206D64C3000693A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B0F748E206D6546000693A4 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		2B0F748F206D6546000693A4 /* BuildingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
+		2B0F7494206D7626000693A4 /* MoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
+		2B0F7496206D80D9000693A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				2B0F748D206D6515000693A4 /* Util */,
+				2B0F7493206D75F6000693A4 /* Controller */,
+				2B0F7492206D75EF000693A4 /* View */,
 				2B0F747B206D64C3000693A4 /* AppDelegate.swift */,
-				2B0F747D206D64C3000693A4 /* CityViewController.swift */,
 				2B0F747F206D64C3000693A4 /* Main.storyboard */,
 				2B0F7482206D64C3000693A4 /* Assets.xcassets */,
 				2B0F7484206D64C3000693A4 /* LaunchScreen.storyboard */,
@@ -72,10 +77,27 @@
 		2B0F748D206D6515000693A4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				2B0F748F206D6546000693A4 /* BuildingView.swift */,
 				2B0F748E206D6546000693A4 /* Misc.swift */,
+				2B0F7496206D80D9000693A4 /* Constants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		2B0F7492206D75EF000693A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B0F748F206D6546000693A4 /* BuildingView.swift */,
+				2B0F7494206D7626000693A4 /* MoonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B0F7493206D75F6000693A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B0F747D206D64C3000693A4 /* CityViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +175,9 @@
 				2B0F7490206D6546000693A4 /* Misc.swift in Sources */,
 				2B0F747E206D64C3000693A4 /* CityViewController.swift in Sources */,
 				2B0F7491206D6546000693A4 /* BuildingView.swift in Sources */,
+				2B0F7495206D7626000693A4 /* MoonView.swift in Sources */,
 				2B0F747C206D64C3000693A4 /* AppDelegate.swift in Sources */,
+				2B0F7497206D80D9000693A4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
