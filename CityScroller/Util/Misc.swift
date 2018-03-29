@@ -60,3 +60,15 @@ extension UIColor {
         return self
     }
 }
+
+protocol RandomizableRange {
+    static var all: [Self] { get }
+}
+
+extension RandomizableRange {
+    static var random: Self {
+        let all = self.all
+        assert(!all.isEmpty)
+        return all[Int.random(min: 0, max: all.count - 1)]
+    }
+}
