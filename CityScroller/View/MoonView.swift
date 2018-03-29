@@ -47,6 +47,7 @@ class MoonView: UIView {
         
         super.init(frame: CGRect(origin: .zero, size: self.size))
         
+        layer.cornerRadius = size * 0.5
         switch brightness {
         case .light:
             backgroundColor = #colorLiteral(red: 0.9689160439, green: 0.9995340705, blue: 0.6887885741, alpha: 1)

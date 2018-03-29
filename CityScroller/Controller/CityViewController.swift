@@ -29,8 +29,6 @@ class CityViewController: UIViewController {
         moonView = setupMoonView()
         view.addSubview(moonView!)
     }
-    
-    // MARK: - Gesture recognizer functions
 
     // MARK: - Other functions
     private func setupMoonView() -> MoonView {
@@ -39,11 +37,13 @@ class CityViewController: UIViewController {
         let moonView = MoonView.randomMoon()
         // Set MoonView's origin
         let moonOriginX = CGFloat.random(min: 0, max: view.bounds.width - moonView.bounds.width)
-        let moonOriginY = CGFloat.random(min: 0, max: Constants.maxMoonOriginY)
+        let moonOriginY = CGFloat.random(min: 0, max: Constants.maxMoonStartingOriginY)
         moonView.frame.origin = CGPoint(x: moonOriginX, y: moonOriginY)
         // Setup LongPress gesture recognizer
         
         return moonView
     }
+    
+    // MARK: - Gesture recognizer functions
 }
 

@@ -13,6 +13,7 @@ struct Constants {
     
     static let minMoonHeightMultiplier: CGFloat = 0.1
     static let maxMoonHeightMultiplier: CGFloat = 0.2
-    static let maxMoonOriginY: CGFloat = 200
+    static let maxMoonStartingOriginY: CGFloat = 100
+    static let maxMoonMoveOriginY: CGFloat = 200
     
 }
