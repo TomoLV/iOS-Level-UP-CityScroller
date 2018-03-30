@@ -15,7 +15,6 @@
 		2B0F7490206D6546000693A4 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F748E206D6546000693A4 /* Misc.swift */; };
 		2B0F7491206D6546000693A4 /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F748F206D6546000693A4 /* BuildingView.swift */; };
 		2B0F7495206D7626000693A4 /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F7494206D7626000693A4 /* MoonView.swift */; };
-		2B0F7497206D80D9000693A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F7496206D80D9000693A4 /* Constants.swift */; };
 		2B0F7499206D8430000693A4 /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F7498206D8430000693A4 /* InfiniteScrollView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		2B0F748E206D6546000693A4 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		2B0F748F206D6546000693A4 /* BuildingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
 		2B0F7494206D7626000693A4 /* MoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
-		2B0F7496206D80D9000693A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B0F7498206D8430000693A4 /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				2B0F748E206D6546000693A4 /* Misc.swift */,
-				2B0F7496206D80D9000693A4 /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -181,7 +178,6 @@
 				2B0F7491206D6546000693A4 /* BuildingView.swift in Sources */,
 				2B0F7495206D7626000693A4 /* MoonView.swift in Sources */,
 				2B0F747C206D64C3000693A4 /* AppDelegate.swift in Sources */,
-				2B0F7497206D80D9000693A4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

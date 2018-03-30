@@ -20,10 +20,16 @@ class MoonView: UIView {
     
     // MARK: - Class properties
     class var minMoonHeight: CGFloat {
-        return UIScreen.main.bounds.height * Constants.minMoonHeightMultiplier
+        return UIScreen.main.bounds.height * MoonViewConstants.minHeightMultiplier
     }
     class var maxMoonHeight: CGFloat {
-        return UIScreen.main.bounds.height * Constants.maxMoonHeightMultiplier
+        return UIScreen.main.bounds.height * MoonViewConstants.maxHeightMultiplier
+    }
+    class var maxStartingOriginY: CGFloat {
+        return UIScreen.main.bounds.height * MoonViewConstants.maxStartingOriginYMultiplier
+    }
+    class var maxMoveOriginY: CGFloat {
+        return UIScreen.main.bounds.height * MoonViewConstants.maxMoveOriginYMultiplier
     }
     
     // MARK: - Private types
@@ -33,6 +39,13 @@ class MoonView: UIView {
         case bright
         
         static var all: [MoonBrightness] { return [.light, .medium, .bright] }
+    }
+    
+    private struct MoonViewConstants {
+        static let minHeightMultiplier: CGFloat = 0.1
+        static let maxHeightMultiplier: CGFloat = 0.2
+        static let maxStartingOriginYMultiplier: CGFloat = 0.1
+        static let maxMoveOriginYMultiplier: CGFloat = 0.3
     }
     
     // MARK: - Instance properties
