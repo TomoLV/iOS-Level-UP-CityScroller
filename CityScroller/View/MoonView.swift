@@ -25,11 +25,11 @@ class MoonView: UIView {
     class var maxMoonHeight: CGFloat {
         return UIScreen.main.bounds.height * MoonViewConstants.maxHeightMultiplier
     }
-    class var maxStartingOriginY: CGFloat {
-        return UIScreen.main.bounds.height * MoonViewConstants.maxStartingOriginYMultiplier
+    class var maxStartingCenterY: CGFloat {
+        return UIScreen.main.bounds.height * MoonViewConstants.maxStartingCenterYMultiplier
     }
-    class var maxMoveOriginY: CGFloat {
-        return UIScreen.main.bounds.height * MoonViewConstants.maxMoveOriginYMultiplier
+    class var maxMoveCenterY: CGFloat {
+        return UIScreen.main.bounds.height * MoonViewConstants.maxMoveCenterYMultiplier
     }
     
     // MARK: - Private types
@@ -44,8 +44,8 @@ class MoonView: UIView {
     private struct MoonViewConstants {
         static let minHeightMultiplier: CGFloat = 0.1
         static let maxHeightMultiplier: CGFloat = 0.2
-        static let maxStartingOriginYMultiplier: CGFloat = 0.1
-        static let maxMoveOriginYMultiplier: CGFloat = 0.3
+        static let maxStartingCenterYMultiplier: CGFloat = 0.15
+        static let maxMoveCenterYMultiplier: CGFloat = 0.3
     }
     
     // MARK: - Instance properties
