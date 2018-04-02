@@ -50,7 +50,9 @@ class CityViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         scrollView.setup(size: size)
-        // TODO: - Obsłużyć MoonView.maxMoveCenterY dla zmiany orientacji telefonu
+        let moonCenterDestinationX = moonView.center.x * view.frame.width / size.width
+        let moonCenterDestinationY = moonView.center.y * view.frame.height / size.height
+        moonView.center = CGPoint(x: moonCenterDestinationX, y: moonCenterDestinationY)
     }
 
     // MARK: - Other functions
