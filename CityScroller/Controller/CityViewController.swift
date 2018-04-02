@@ -10,7 +10,6 @@ import UIKit
 
 class CityViewController: UIViewController {
     
-    // TODO: - Czy zmienić moonViewCenterOffset na CGVector?
     // MARK: - Instance properties
     private var grabOffset: CGVector?
     private var moonViewCenterOffset: CGPoint?
@@ -81,7 +80,7 @@ class CityViewController: UIViewController {
         case .changed:
             let grabOffset = self.grabOffset ?? CGVector.zero
             let centerX = touchLocation.x - grabOffset.dx
-            // MoonView should stay in the upper part of the parent view
+            // moonView should stay in the upper part of the parent view
             let centerY = touchLocation.y - grabOffset.dy <= MoonView.maxMoveCenterY + scrollView.contentOffset.y * moonViewParallaxMultiplier ? touchLocation.y - grabOffset.dy : grabbedView.center.y
             grabbedView.center = CGPoint(x: centerX, y: centerY)
         case .cancelled:
@@ -92,7 +91,6 @@ class CityViewController: UIViewController {
             // Support parallax moonView
             moonViewCenterOffset = CGPoint(x: grabbedView.center.x - scrollView.contentOffset.x, y: grabbedView.center.y - scrollView.contentOffset.y * moonViewParallaxMultiplier)
         default:
-            print("elo")
             return
         }
     }
