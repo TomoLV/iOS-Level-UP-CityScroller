@@ -45,7 +45,7 @@ class MoonView: UIView {
         static let minHeightMultiplier: CGFloat = 0.1
         static let maxHeightMultiplier: CGFloat = 0.2
         static let maxStartingCenterYMultiplier: CGFloat = 0.15
-        static let maxMoveCenterYMultiplier: CGFloat = 0.3
+        static let maxMoveCenterYMultiplier: CGFloat = 0.4
     }
     
     // MARK: - Instance properties
