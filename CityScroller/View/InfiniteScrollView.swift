@@ -47,8 +47,8 @@ class InfiniteScrollView: UIScrollView {
         // Pass all touches, so moonView can be moved
         buildingsContainerView.isUserInteractionEnabled = false
         backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
-        //showsVerticalScrollIndicator = false
-        //showsHorizontalScrollIndicator = false
+        showsVerticalScrollIndicator = false
+        showsHorizontalScrollIndicator = false
         
         visibleBuildings.forEach { $0.removeFromSuperview() }
         visibleBuildings.removeAll()
