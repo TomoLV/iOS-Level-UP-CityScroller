@@ -82,8 +82,7 @@ class CityViewController: UIViewController {
             let grabOffset = self.grabOffset ?? CGVector.zero
             let centerX = touchLocation.x - grabOffset.dx
             // MoonView should stay in the upper part of the parent view
-            // TODO: - Sprawdzić poprawność paralaksy
-            let centerY = touchLocation.y - grabOffset.dy <= MoonView.maxMoveCenterY ? touchLocation.y - grabOffset.dy : grabbedView.center.y
+            let centerY = touchLocation.y - grabOffset.dy <= MoonView.maxMoveCenterY + scrollView.contentOffset.y * moonViewParallaxMultiplier ? touchLocation.y - grabOffset.dy : grabbedView.center.y
             grabbedView.center = CGPoint(x: centerX, y: centerY)
         case .cancelled:
             fallthrough
@@ -91,7 +90,6 @@ class CityViewController: UIViewController {
             grab(view: grabbedView, up: false)
             grabOffset = nil
             // Support parallax moonView
-            // TODO: - Sprawdzić poprawność paralaksy
             moonViewCenterOffset = CGPoint(x: grabbedView.center.x - scrollView.contentOffset.x, y: grabbedView.center.y - scrollView.contentOffset.y * moonViewParallaxMultiplier)
         default:
             print("elo")
