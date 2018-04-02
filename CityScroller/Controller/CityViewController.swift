@@ -91,6 +91,7 @@ class CityViewController: UIViewController {
             grab(view: grabbedView, up: false)
             grabOffset = nil
             // Support parallax moonView
+            // TODO: - Sprawdzić poprawność paralaksy
             moonViewCenterOffset = CGPoint(x: grabbedView.center.x - scrollView.contentOffset.x, y: grabbedView.center.y - scrollView.contentOffset.y * moonViewParallaxMultiplier)
         default:
             print("elo")
