@@ -51,6 +51,7 @@ class CityViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         scrollView.setup(size: size)
+        // TODO: - Obsłużyć MoonView.maxMoveCenterY dla zmiany orientacji telefonu
     }
 
     // MARK: - Other functions
@@ -81,6 +82,7 @@ class CityViewController: UIViewController {
             let grabOffset = self.grabOffset ?? CGVector.zero
             let centerX = touchLocation.x - grabOffset.dx
             // MoonView should stay in the upper part of the parent view
+            // TODO: - Sprawdzić poprawność paralaksy
             let centerY = touchLocation.y - grabOffset.dy <= MoonView.maxMoveCenterY ? touchLocation.y - grabOffset.dy : grabbedView.center.y
             grabbedView.center = CGPoint(x: centerX, y: centerY)
         case .cancelled:
