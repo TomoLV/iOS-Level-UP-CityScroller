@@ -18,7 +18,7 @@ class CityViewController: UIViewController {
     private let moonViewParallaxMultiplier: CGFloat = 0.5
     
     private var lastContentOffsetY: CGFloat?
-
+    
     // MARK: - View Controller's Lifecycle
     override func loadView() {
         self.view = InfiniteScrollView()
@@ -28,7 +28,7 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
-
+        
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         moonView.addGestureRecognizer(longPress)
         
@@ -50,11 +50,12 @@ class CityViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         scrollView.setup(size: size)
-        let moonCenterDestinationX = moonView.center.x * view.frame.width / size.width
-        let moonCenterDestinationY = moonView.center.y * view.frame.height / size.height
-        moonView.center = CGPoint(x: moonCenterDestinationX, y: moonCenterDestinationY)
+        if moonViewCenterOffset != nil {
+            moonViewCenterOffset!.x = moonViewCenterOffset!.x * size.width / view.frame.width
+            moonViewCenterOffset!.y = moonViewCenterOffset!.y * size.height / view.frame.height
+        }
     }
-
+    
     // MARK: - Other functions
     private func positionMoonView() {
         guard let moonViewCenterOffset = moonViewCenterOffset else { return }
