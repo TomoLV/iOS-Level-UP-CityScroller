@@ -20,7 +20,7 @@ class InfiniteScrollView: UIScrollView {
         }
     }
     
-    // MARK: View's Lifecycle
+    // MARK: - View's Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -44,7 +44,7 @@ class InfiniteScrollView: UIScrollView {
         contentSize = CGSize(width: size.width * 3, height: BuildingView.maxBuildingHeight)
         buildingsContainerView.frame = CGRect(origin: .zero, size: contentSize)
         buildingsContainerView.backgroundColor = .clear
-        // Pass all touches, so moonView can be moved
+        // Pass all touches, so moonView can be moved even if it's behind
         buildingsContainerView.isUserInteractionEnabled = false
         backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
         showsVerticalScrollIndicator = false
