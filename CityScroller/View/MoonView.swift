@@ -38,6 +38,19 @@ class MoonView: UIView {
         case medium
         case bright
         
+        var color: UIColor {
+            get {
+                switch self {
+                case .light:
+                    return #colorLiteral(red: 0.9689160439, green: 0.9995340705, blue: 0.6887885741, alpha: 1)
+                case .medium:
+                    return #colorLiteral(red: 0.9507429377, green: 0.9995340705, blue: 0.4629764804, alpha: 1)
+                case .bright:
+                    return #colorLiteral(red: 0.9768924427, green: 0.9995340705, blue: 0.08164246027, alpha: 1)
+                }
+            }
+        }
+        
         static var all: [MoonBrightness] { return [.light, .medium, .bright] }
     }
     
@@ -61,14 +74,7 @@ class MoonView: UIView {
         super.init(frame: CGRect(origin: .zero, size: self.size))
         
         layer.cornerRadius = size * 0.5
-        switch brightness {
-        case .light:
-            backgroundColor = #colorLiteral(red: 0.9689160439, green: 0.9995340705, blue: 0.6887885741, alpha: 1)
-        case .medium:
-            backgroundColor = #colorLiteral(red: 0.9507429377, green: 0.9995340705, blue: 0.4629764804, alpha: 1)
-        case .bright:
-            backgroundColor = #colorLiteral(red: 0.9768924427, green: 0.9995340705, blue: 0.08164246027, alpha: 1)
-        }
+        backgroundColor = brightness.color
     }
     
     required init?(coder aDecoder: NSCoder) {
