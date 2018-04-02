@@ -23,7 +23,7 @@ import UIKit
 class BuildingView: UIView {
 
     class func randomBuilding() -> BuildingView {
-        let height = CGFloat.random(min: 350, max: maxBuildingHeight)
+        let height = CGFloat.random(min: minBuildingHeight, max: maxBuildingHeight)
         let width = CGFloat.random(min: 120, max: 200)
         let windowSize = CGFloat.random(min: 21, max: 30)
         let windowsHorizontnal = Int(width / (windowSize + 20.0))
@@ -41,6 +41,10 @@ class BuildingView: UIView {
 
     class var maxBuildingHeight: CGFloat {
         return UIScreen.main.bounds.height + 50.0
+    }
+    
+    class var minBuildingHeight: CGFloat {
+        return UIScreen.main.bounds.height * 0.5
     }
 
     private enum FloorStyle: RandomizableRange {
