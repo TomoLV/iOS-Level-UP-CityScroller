@@ -90,7 +90,7 @@ class InfiniteScrollView: UIScrollView {
     }
     
     private func tileBuildings(from minX: CGFloat, to maxX: CGFloat) {
-        if visibleBuildings.count == 0 { _ = placeNewBuildingOnTheRight(edge: 0.0) }
+        if visibleBuildings.count == 0 { _ = placeNewBuildingOnTheRight(edge: minX) }
         
         var lastVisibleBuilding = visibleBuildings.last!
         while lastVisibleBuilding.frame.maxX < maxX {
