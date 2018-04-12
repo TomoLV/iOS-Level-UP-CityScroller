@@ -11,6 +11,7 @@ import UIKit
 class InfiniteScrollView: UIScrollView {
     
     // MARK: - Instance properties
+    
     private let buildingsContainerView = UIView()
     private var visibleBuildings: [BuildingView] = []
     
@@ -21,6 +22,7 @@ class InfiniteScrollView: UIScrollView {
     }
     
     // MARK: - View's Lifecycle
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -30,6 +32,7 @@ class InfiniteScrollView: UIScrollView {
     }
     
     // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         addSubview(buildingsContainerView)
@@ -40,6 +43,7 @@ class InfiniteScrollView: UIScrollView {
     }
     
     // MARK: - Functions
+    
     func setup(size: CGSize) {
         contentSize = CGSize(width: size.width * 3, height: BuildingView.maxBuildingHeight)
         buildingsContainerView.frame = CGRect(origin: .zero, size: contentSize)

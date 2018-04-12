@@ -11,6 +11,7 @@ import UIKit
 class MoonView: UIView {
     
     // MARK: - Class functions
+    
     class func randomMoon() -> MoonView {
         let size = CGFloat.random(min: minMoonHeight, max: maxMoonHeight)
         let brightness = MoonBrightness.random
@@ -19,6 +20,7 @@ class MoonView: UIView {
     }
     
     // MARK: - Class properties
+    
     class var minMoonHeight: CGFloat {
         return UIScreen.main.bounds.height * MoonViewConstants.minHeightMultiplier
     }
@@ -33,6 +35,7 @@ class MoonView: UIView {
     }
     
     // MARK: - Private types
+    
     private enum MoonBrightness: RandomizableRange {
         case light
         case medium
@@ -62,10 +65,12 @@ class MoonView: UIView {
     }
     
     // MARK: - Instance properties
+    
     private let size: CGSize
     private let brightness: MoonBrightness
 
     // MARK: - Initializers
+    
     private init(size: CGFloat, brightness: MoonBrightness) {
         
         self.size = CGSize(width: size, height: size)

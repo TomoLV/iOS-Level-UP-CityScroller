@@ -11,6 +11,7 @@ import UIKit
 class CityViewController: UIViewController {
     
     // MARK: - Instance properties
+    
     private var grabOffset: CGVector?
     private var moonViewCenterOffset: CGPoint? // TODO: - Could potentially change it to implicitly unwrapped optional for easier use in the code
     private var scrollView: InfiniteScrollView { return view as! InfiniteScrollView }
@@ -20,6 +21,7 @@ class CityViewController: UIViewController {
     private var lastContentOffsetY: CGFloat?
     
     // MARK: - View Controller's Lifecycle
+    
     override func loadView() {
         self.view = InfiniteScrollView()
         view.backgroundColor = UIColor.black
@@ -51,6 +53,7 @@ class CityViewController: UIViewController {
     }
     
     // MARK: - Other functions
+    
     private func positionMoonView() {
         guard let moonViewCenterOffset = moonViewCenterOffset else { return }
         moonView.center.x = scrollView.contentOffset.x + moonViewCenterOffset.x
@@ -67,6 +70,7 @@ class CityViewController: UIViewController {
     }
     
     // MARK: - Gesture recognizer functions
+    
     @objc func handleLongPress(_ longPress: UILongPressGestureRecognizer) {
         guard let grabbedView = longPress.view else { return }
         let touchLocation = longPress.location(in: view)
@@ -102,6 +106,7 @@ class CityViewController: UIViewController {
 }
 
 // MARK: - UIScrollViewDelegate implementation
+
 extension CityViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
