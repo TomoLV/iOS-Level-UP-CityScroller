@@ -12,7 +12,7 @@ class CityViewController: UIViewController {
     
     // MARK: - Instance properties
     private var grabOffset: CGVector?
-    private var moonViewCenterOffset: CGPoint?
+    private var moonViewCenterOffset: CGPoint? // TODO: - Could potentially change it to implicitly unwrapped optional for easier use in the code
     private var scrollView: InfiniteScrollView { return view as! InfiniteScrollView }
     private var moonView = MoonView.randomMoon()
     private let moonViewParallaxMultiplier: CGFloat = 0.5
@@ -36,14 +36,8 @@ class CityViewController: UIViewController {
         view.sendSubview(toBack: moonView)
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        // TODO: - Pytania do Michała
-        // 0. Czy w ogóle takie podejście do tematu jest odpowiednie?
-        // 1. randomizeMoonViewOffsetIfNecessary() powinno zostać uruchomione tylko jeden raz, aby wybrać losową lokalizację dla moonView. Znaleźć odpowiednie miejsce na wykonanie tego fragmentu kodu - czy to na pewno tutaj?
-        //  - konieczne jest znanie wielkości frame parent view, ponieważ na tej podstawie określana jest współrzędna x
-        //  - w związku z powyższym niemożliwe jest wywołanie tego w viewDidLoad()
-        // 2. Czy dobrym rozwiązaniem jest definicja moonViewCenterOffset jako Optional - być może lepszym podjeściem jest zastosowanie w jakiś sposób lazy var?
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         randomizeMoonViewOffsetIfNecessary()
     }
     
